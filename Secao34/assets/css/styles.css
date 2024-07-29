@@ -37,7 +37,7 @@ h2 {
 }
 
 h3 {
-    font-size: 5rem;
+    font-size: 2.5rem;
 }
 
 h4 {
@@ -76,7 +76,7 @@ p {
 
 .section {
     min-height: 100vh;
-    max-height: 50vh;
+    max-height: 100vh;
 }
 
 .white-bg {
@@ -128,21 +128,23 @@ p {
  }
 
  .menu-spacing {
-    height: 150px;
-    right: 5px;
+    display: none;
  }
 
  .intro-content {
+    /* position: relative; */
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    align-items: stretch;
     gap: var(--gap);
-    height: 100vh;
+    min-height: 100vh;
+    align-items: stretch;
+    margin-top: 10vh;
  }
 
  .intro-text-content, .intro-img {
     display: flex;
     flex-flow: column wrap;
+    align-items: center;
  }
 
  .intro-img img {
@@ -150,11 +152,46 @@ p {
     height: auto;
  }
 
- .top3-content {
-    max-width: 64rem;
+ .top5-content {
+    max-width: 65rem;
+    /* display: list-item; */
+    /* flex-flow: column wrap; */
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    min-height: 10vh;
+    text-align: center;
+ }
+
+ .pqusar-content {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    height: 70vh;
-    text-align: center;
+    min-height: 80vh;
+ }
+
+ .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    align-items: first baseline;
+    counter-reset: grid-counter;
+ }
+
+ .grid h3 {
+    font-size: 2rem;
+    position: relative;
+    padding-left: 4rem;
+    padding-bottom: 2rem;
+ }
+
+ .grid h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 4rem;
+    font-style: italic;
+    top: -1rem;
+    left: 0;
+    transform: rotate(5deg);
  }
