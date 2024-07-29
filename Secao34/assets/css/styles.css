@@ -76,7 +76,7 @@ p {
 
 .section {
     min-height: 100vh;
-    max-height: 100vh;
+    max-height: 110vh;
 }
 
 .white-bg {
@@ -194,4 +194,48 @@ p {
     top: -1rem;
     left: 0;
     transform: rotate(5deg);
+ }
+
+.gallery-img {
+    width: 100%;
+    max-width: 30rem;
+    max-height: 30rem;
+    overflow: hidden;
+}
+
+.gallery-img img {
+   transition: all 300ms ease; 
+}
+
+.gallery-img img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg); 
+ }
+
+ .responsive-table {
+   overflow: hidden;
+   overflow-x: auto; 
+ }
+
+ table {
+    min-width: 360px;
+    width: 100%;
+    border-collapse: collapse;
+ }
+
+ table caption {
+    font-size: 1.3rem;
+    font-style: italic;
+    text-align: left;
+    margin-bottom: 1rem;
+ }
+
+ table th {
+   background: var(--light-gray-color); 
+   color: #2e0c0c;
+ }
+
+ table td, table th{
+    padding: 1rem;
+    text-align: left;
+    border: 0.1rem solid var(--light-gray-color)
  }
