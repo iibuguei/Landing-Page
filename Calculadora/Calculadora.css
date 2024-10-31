@@ -1,19 +1,106 @@
-form button :hover {
-    background: rgb(0, 13, 133);
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .calculadora {
-    width: 400px;
+    width: 320px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px;
 }
 
 .display {
-    font-size: 2em;
     width: 100%;
+    padding: 15px;
+    font-size: 24px;
     text-align: right;
+    border: none;
+    background-color: #222;
+    color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Alinhamento do display */
+    margin-bottom: 10px;
+    height: 50px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.btn {
+button {
     width: 100%;
-    height: 50px;
-    font-size: 1em;
+    padding: 20px;
+    font-size: 18px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Cores específicas para botões */
+.btn-clear {
+    background-color: #f44336; /* Vermelho */
+}
+
+.btn-clear:hover {
+    background-color: #d32f2f;
+}
+
+.btn-del {
+    background-color: #ff9800; /* Laranja */
+}
+
+.btn-del:hover {
+    background-color: #e68900;
+}
+
+.btn-eq {
+    background-color: #4caf50; /* Verde */
+}
+
+.btn-eq:hover {
+    background-color: #43a047;
+}
+
+/* Estilos para os números e operadores */
+.btn-num {
+    background-color: #333;
+}
+
+.btn-num:hover {
+    background-color: #444;
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+    .calculadora {
+        width: 100%;
+        margin: 10px;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 16px;
+    }
 }
